@@ -14,7 +14,6 @@ public class Main {
         RemoteWebDriver webDriver = new RemoteWebDriver(new URL("http://web-driver.tool.net:4444"), DesiredCapabilities.chrome());
         webDriver.get("https://cn.bing.com/");
         Thread.sleep(3000);
-
         List<WebElement> elements = webDriver.findElements(xpath("//*[text()='国际版']"));
         System.out.println(elements.get(0).getText());
         webDriver.quit();
